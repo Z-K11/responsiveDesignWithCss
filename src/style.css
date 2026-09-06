@@ -1,0 +1,36 @@
+:root {
+  --mainDark: #1b4ef5;
+  --main: #3874ff;
+  --main-light: #5996ff;
+  --background: #f4ceff;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.triangle {
+  background-color: var(--mainDark, darkblue);
+  height: 60vh;
+  width: 100vw;
+  clip-path: polygon(0 0, 100% 0, 100% 30%, 0 100%);
+}
+body {
+  background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hero {
+  width: 90%;
+  position: absolute;
+  top: 5%;
+}
+.hero img {
+  width: 100%;
+  clip-path: polygon(0 5%, 5% 0, 100% 0, 100% 95%, 95% 100%, 0 100%);
+}
+.overlayText {
+  font-size: 32px;
+  color: var(--mainDark);
+}
