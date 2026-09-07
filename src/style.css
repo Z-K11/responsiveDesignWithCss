@@ -107,3 +107,13 @@ footer h4 {
 .footerContent {
   font-size: 4.6vw;
 }
+.icons {
+  display: flex;
+  padding: 0 5vw;
+  justify-content: center;
+  gap: 5vw;
+}
+.icons img {
+  width: 14vw;
+  filter: invert();
+}
