@@ -45,7 +45,7 @@ body {
 }
 .aboutSection h2 {
   font-weight: normal;
-  font-size: 12vw;
+  font-size: clamp(2.2rem, 10vw + 1rem, 12rem);
   color: var(--main);
   text-align: center;
 }
@@ -59,7 +59,7 @@ body {
 .aboutSection,
 .achievmentSection {
   padding: 3vw 5vw;
-  font-size: 6vw;
+  font-size: clamp(1.6rem, 2vw + 1rem, 6rem);
   color: var(--main);
 }
 .achievmentSection h3 {
@@ -98,14 +98,14 @@ footer {
   padding-top: 5vw;
 }
 footer h4 {
-  font-size: 10vw;
+  font-size: clamp(4rem, 7vw + 1rem, 12rem);
   text-align: center;
 }
 .footerContent p {
   margin: 2rem 0;
 }
 .footerContent {
-  font-size: 4.6vw;
+  font-size: clamp(1.6rem, 3vw + 1rem, 8rem);
   padding: 0 5vw;
 }
 .icons {
@@ -116,10 +116,22 @@ footer h4 {
   margin-bottom: 2rem;
 }
 .icons img {
-  width: 14vw;
+  width: 10vw;
   filter: invert();
 }
 .footerImg img {
   width: 100vw;
   display: block;
+}
+@media (min-width: 540px) {
+  .heroWrapper {
+    height: 70vw;
+  }
+  .achievementsWrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .achievementsWrapper p {
+    flex: 0 1 calc(50% - 2.5vw);
+  }
 }
