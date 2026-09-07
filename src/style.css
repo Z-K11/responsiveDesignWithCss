@@ -3,6 +3,7 @@
   --main: #3874ff;
   --main-light: #5996ff;
   --background: #f4ceff;
+  font-size: 62.5%;
 }
 * {
   margin: 0;
@@ -11,26 +12,46 @@
 }
 .triangle {
   background-color: var(--mainDark, darkblue);
-  height: 60vh;
+  height: 95%;
   width: 100vw;
   clip-path: polygon(0 0, 100% 0, 100% 30%, 0 100%);
 }
 body {
   background-color: var(--background);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+}
+.heroWrapper {
+  position: relative;
+  height: 135vw;
 }
 .hero {
-  width: 90%;
+  display: block;
   position: absolute;
   top: 5%;
+  padding: 0 5vw;
 }
 .hero img {
-  width: 100%;
   clip-path: polygon(0 5%, 5% 0, 100% 0, 100% 95%, 95% 100%, 0 100%);
+  width: 100%;
+  display: block;
 }
 .overlayText {
-  font-size: 32px;
+  font-size: clamp(2.2rem, 6vw + 1rem, 6rem);
   color: var(--mainDark);
+  font-weight: normal;
+  padding: 0 5vw;
+}
+.aboutSection {
+  padding: 3vw 5vw;
+  font-size: clamp(1.6rem, 3vw + 1rem, 4rem);
+}
+.aboutSection h2 {
+  font-weight: normal;
+  font-size: 12vw;
+  color: var(--main-light);
+  text-align: center;
+}
+.aboutSection p {
+  display: block;
+  padding: 0.8rem 0;
+  color: var(--main);
 }
