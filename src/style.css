@@ -2,7 +2,9 @@
   --mainDark: #1b4ef5;
   --main: #3874ff;
   --main-light: #5996ff;
-  --background: #f4ceff;
+  /* --background: #f4ceff; */
+  --background: white;
+  --backgroundLight: #f4ceff;
   font-size: 62.5%;
 }
 * {
@@ -40,18 +42,34 @@ body {
   font-weight: normal;
   padding: 0 5vw;
 }
-.aboutSection {
-  padding: 3vw 5vw;
-  font-size: clamp(1.6rem, 3vw + 1rem, 4rem);
-}
 .aboutSection h2 {
   font-weight: normal;
   font-size: 12vw;
-  color: var(--main-light);
+  color: var(--main);
   text-align: center;
 }
-.aboutSection p {
+.aboutSection p,
+.achievementsWrapper p {
   display: block;
-  padding: 0.8rem 0;
+  padding: 1.6rem 1.6rem;
+  border: 0.6rem double var(--mainDark);
+  clip-path: polygon(0 5%, 5% 0, 100% 0, 100% 95%, 95% 100%, 0 100%);
+}
+.aboutSection,
+.achievmentSection {
+  padding: 3vw 5vw;
+  font-size: 6vw;
   color: var(--main);
+}
+.achievmentSection h3 {
+  font-size: 10vw;
+  text-align: center;
+  color: var(--main);
+  font-weight: normal;
+}
+.achievementsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5vw;
+  padding: 5vw 0;
 }
