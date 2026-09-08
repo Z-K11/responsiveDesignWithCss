@@ -25,6 +25,7 @@ body {
 .heroWrapper {
   position: relative;
   height: 135vw;
+  z-index: 0;
 }
 .hero {
   display: block;
@@ -38,14 +39,14 @@ body {
   display: block;
 }
 .overlayText {
-  font-size: clamp(2.2rem, 6vw + 1rem, 6rem);
+  font-size: clamp(2.2rem, 6vw + 1rem, 8rem);
   color: var(--mainDark);
   font-weight: normal;
   padding: 0 5vw;
 }
 .aboutSection h2 {
   font-weight: normal;
-  font-size: clamp(2.2rem, 10vw + 1rem, 12rem);
+  font-size: clamp(2.2rem, 5vw + 1rem, 10rem);
   color: var(--main);
   text-align: center;
 }
@@ -56,10 +57,15 @@ body {
   border: 0.6rem double var(--mainDark);
   clip-path: polygon(0 5%, 5% 0, 100% 0, 100% 95%, 95% 100%, 0 100%);
 }
+.aboutSection {
+  font-size: clamp(1.6rem, 1.4vw + 1rem, 3.6rem);
+}
+.achievmentSection {
+  font-size: clamp(2rem, 2vw + 1rem, 3.6rem);
+}
 .aboutSection,
 .achievmentSection {
   padding: 3vw 5vw;
-  font-size: clamp(1.6rem, 2vw + 1rem, 6rem);
   color: var(--main);
 }
 .achievmentSection h3 {
@@ -95,17 +101,17 @@ body {
 footer {
   background-color: var(--mainDark);
   color: var(--backgroundLight);
-  padding-top: 5vw;
+  padding: 5vw 0;
 }
 footer h4 {
-  font-size: clamp(4rem, 7vw + 1rem, 12rem);
+  font-size: clamp(4rem, 7vw + 1rem, 8rem);
   text-align: center;
 }
 .footerContent p {
   margin: 2rem 0;
 }
 .footerContent {
-  font-size: clamp(1.6rem, 3vw + 1rem, 8rem);
+  font-size: clamp(1.6rem, 3vw + 1rem, 2.6rem);
   padding: 0 5vw;
 }
 .icons {
@@ -133,5 +139,51 @@ footer h4 {
   }
   .achievementsWrapper p {
     flex: 0 1 calc(50% - 2.5vw);
+  }
+}
+@media (min-width: 1200px) {
+  .hero {
+    width: 50vw;
+  }
+  .overlayText {
+    position: absolute;
+    z-index: 1;
+    margin-top: -20vw;
+    color: var(--backgroundLight);
+    width: 50vw;
+  }
+  .aboutSection {
+    position: absolute;
+    top: 0;
+    left: 45%;
+    color: var(--backgroundLight);
+    width: 55vw;
+    height: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .aboutSection p {
+    background-color: white;
+    color: var(--mainDark);
+  }
+  .aboutSection h2 {
+    filter: invert();
+  }
+  .achievementsWrapper p {
+    flex: 1 1 0;
+  }
+  .heroWrapper {
+    height: 50vw;
+  }
+  .icons img {
+    width: 5vw;
+  }
+  footer {
+    display: flex;
+    align-items: center;
+  }
+  .footerImg img {
+    width: 25vw;
   }
 }
